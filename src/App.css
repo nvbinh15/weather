@@ -1,0 +1,43 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.title {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 0 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.cards {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 700px;
+  justify-content: center;
+}
+
+.last-updated {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
