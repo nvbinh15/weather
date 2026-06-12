@@ -1,0 +1,327 @@
+.animals-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  image-rendering: pixelated;
+}
+
+.animal {
+  position: absolute;
+}
+
+/* ===== CAT ===== */
+.cat {
+  bottom: 32px;
+  left: -60px;
+  animation: run-right 18s linear infinite;
+}
+
+.cat-body {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  box-shadow:
+    /* head */
+    8px 0 0 #4a4a5a,
+    12px 0 0 #4a4a5a,
+    4px 4px 0 #4a4a5a,
+    8px 4px 0 #6b6b80,
+    12px 4px 0 #6b6b80,
+    16px 4px 0 #4a4a5a,
+    /* ears */
+    4px -4px 0 #4a4a5a,
+    16px -4px 0 #4a4a5a,
+    /* eyes */
+    8px 4px 0 #a3e635,
+    12px 4px 0 #a3e635,
+    /* body */
+    4px 8px 0 #6b6b80,
+    8px 8px 0 #6b6b80,
+    12px 8px 0 #6b6b80,
+    16px 8px 0 #6b6b80,
+    20px 8px 0 #6b6b80,
+    4px 12px 0 #6b6b80,
+    8px 12px 0 #7a7a90,
+    12px 12px 0 #7a7a90,
+    16px 12px 0 #7a7a90,
+    20px 12px 0 #6b6b80,
+    24px 12px 0 #6b6b80,
+    /* legs */
+    4px 16px 0 #4a4a5a,
+    8px 16px 0 #4a4a5a,
+    20px 16px 0 #4a4a5a,
+    24px 16px 0 #4a4a5a;
+  animation: cat-legs 0.3s step-end infinite;
+}
+
+.cat-tail {
+  position: absolute;
+  top: 4px;
+  left: 28px;
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  box-shadow:
+    0 0 0 #6b6b80,
+    4px 0 0 #6b6b80,
+    8px -4px 0 #6b6b80,
+    8px -8px 0 #6b6b80;
+  animation: cat-tail-wag 0.6s step-end infinite;
+}
+
+@keyframes cat-legs {
+  0%, 100% {
+    box-shadow:
+      8px 0 0 #4a4a5a, 12px 0 0 #4a4a5a,
+      4px 4px 0 #4a4a5a, 8px 4px 0 #a3e635, 12px 4px 0 #a3e635, 16px 4px 0 #4a4a5a,
+      4px -4px 0 #4a4a5a, 16px -4px 0 #4a4a5a,
+      4px 8px 0 #6b6b80, 8px 8px 0 #6b6b80, 12px 8px 0 #6b6b80, 16px 8px 0 #6b6b80, 20px 8px 0 #6b6b80,
+      4px 12px 0 #6b6b80, 8px 12px 0 #7a7a90, 12px 12px 0 #7a7a90, 16px 12px 0 #7a7a90, 20px 12px 0 #6b6b80, 24px 12px 0 #6b6b80,
+      4px 16px 0 #4a4a5a, 8px 16px 0 transparent, 20px 16px 0 transparent, 24px 16px 0 #4a4a5a;
+  }
+  50% {
+    box-shadow:
+      8px 0 0 #4a4a5a, 12px 0 0 #4a4a5a,
+      4px 4px 0 #4a4a5a, 8px 4px 0 #a3e635, 12px 4px 0 #a3e635, 16px 4px 0 #4a4a5a,
+      4px -4px 0 #4a4a5a, 16px -4px 0 #4a4a5a,
+      4px 8px 0 #6b6b80, 8px 8px 0 #6b6b80, 12px 8px 0 #6b6b80, 16px 8px 0 #6b6b80, 20px 8px 0 #6b6b80,
+      4px 12px 0 #6b6b80, 8px 12px 0 #7a7a90, 12px 12px 0 #7a7a90, 16px 12px 0 #7a7a90, 20px 12px 0 #6b6b80, 24px 12px 0 #6b6b80,
+      4px 16px 0 transparent, 8px 16px 0 #4a4a5a, 20px 16px 0 #4a4a5a, 24px 16px 0 transparent;
+  }
+}
+
+@keyframes cat-tail-wag {
+  0%, 100% {
+    box-shadow: 0 0 0 #6b6b80, 4px 0 0 #6b6b80, 8px -4px 0 #6b6b80, 8px -8px 0 #6b6b80;
+  }
+  50% {
+    box-shadow: 0 0 0 #6b6b80, 4px -4px 0 #6b6b80, 8px -8px 0 #6b6b80, 4px -12px 0 #6b6b80;
+  }
+}
+
+/* ===== BUNNY ===== */
+.bunny {
+  bottom: 36px;
+  left: -40px;
+  animation: hop-right 22s linear infinite;
+  animation-delay: -6s;
+}
+
+.bunny-body {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  box-shadow:
+    /* body */
+    4px 8px 0 #f0e6d8,
+    8px 8px 0 #f5efe6,
+    12px 8px 0 #f5efe6,
+    4px 12px 0 #f5efe6,
+    8px 12px 0 #fff,
+    12px 12px 0 #f5efe6,
+    16px 12px 0 #f0e6d8,
+    /* head */
+    4px 4px 0 #f5efe6,
+    8px 4px 0 #f5efe6,
+    12px 4px 0 #f0e6d8,
+    /* eyes */
+    8px 4px 0 #ff6b8a,
+    /* feet */
+    4px 16px 0 #f0d6d0,
+    8px 16px 0 #f0d6d0,
+    12px 16px 0 #f0d6d0,
+    16px 16px 0 #f0d6d0,
+    /* tail poof */
+    16px 8px 0 #fff;
+  animation: bunny-hop 0.6s step-end infinite;
+}
+
+.bunny-ear-l {
+  position: absolute;
+  top: -8px;
+  left: 4px;
+  width: 4px;
+  height: 8px;
+  background: #f5efe6;
+  border-top: 2px solid #f0d6d0;
+  animation: bunny-ear-twitch-l 1.2s step-end infinite;
+}
+
+.bunny-ear-r {
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  width: 4px;
+  height: 8px;
+  background: #f5efe6;
+  border-top: 2px solid #f0d6d0;
+  animation: bunny-ear-twitch-r 1.2s step-end infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes bunny-hop {
+  0%, 60%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-12px); }
+  40% { transform: translateY(-6px); }
+}
+
+@keyframes bunny-ear-twitch-l {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-10deg); }
+  40% { transform: rotate(0deg); }
+}
+
+@keyframes bunny-ear-twitch-r {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(10deg); }
+  50% { transform: rotate(0deg); }
+}
+
+/* ===== BIRDS ===== */
+.bird {
+  top: 60px;
+}
+
+.bird-1 {
+  left: -30px;
+  animation: fly-right 14s linear infinite;
+}
+
+.bird-2 {
+  left: -30px;
+  top: 90px;
+  animation: fly-right 16s linear infinite;
+  animation-delay: -8s;
+}
+
+.bird-body {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  box-shadow:
+    0 0 0 #fbbf24,
+    4px 0 0 #fbbf24,
+    8px 0 0 #f59e0b,
+    -4px 0 0 #fbbf24,
+    0 4px 0 #fbbf24,
+    4px 4px 0 #fcd34d,
+    8px 4px 0 #fbbf24,
+    /* beak */
+    12px 0 0 #f97316,
+    12px 4px 0 #fb923c,
+    /* eye */
+    8px 0 0 #1a1a2e;
+}
+
+.bird-wing {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  box-shadow:
+    0 0 0 #f59e0b,
+    4px 0 0 #fbbf24,
+    4px -4px 0 #fbbf24;
+  animation: bird-flap 0.25s step-end infinite;
+}
+
+@keyframes bird-flap {
+  0%, 100% {
+    box-shadow: 0 0 0 #f59e0b, 4px 0 0 #fbbf24, 4px -4px 0 #fbbf24;
+  }
+  50% {
+    box-shadow: 0 4px 0 #f59e0b, 4px 4px 0 #fbbf24, 4px 8px 0 #fbbf24;
+  }
+}
+
+/* ===== DUCK ===== */
+.duck {
+  bottom: 28px;
+  left: -40px;
+  animation: waddle-right 25s linear infinite;
+  animation-delay: -12s;
+}
+
+.duck-body {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  box-shadow:
+    /* head */
+    4px 0 0 #4ade80,
+    8px 0 0 #4ade80,
+    4px 4px 0 #22c55e,
+    8px 4px 0 #22c55e,
+    /* eye */
+    8px 0 0 #1a1a2e,
+    /* body */
+    0 8px 0 #fef9c3,
+    4px 8px 0 #fef08a,
+    8px 8px 0 #fef08a,
+    12px 8px 0 #fef9c3,
+    0 12px 0 #fde68a,
+    4px 12px 0 #fef9c3,
+    8px 12px 0 #fef9c3,
+    12px 12px 0 #fde68a,
+    /* feet */
+    4px 16px 0 #fb923c,
+    8px 16px 0 #fb923c;
+  animation: duck-waddle 0.5s step-end infinite;
+}
+
+.duck-beak {
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  width: 8px;
+  height: 4px;
+  background: #fb923c;
+  border-radius: 0 2px 2px 0;
+}
+
+@keyframes duck-waddle {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(3deg) translateY(-2px);
+  }
+  75% {
+    transform: rotate(-3deg) translateY(-2px);
+  }
+}
+
+/* ===== MOVEMENT PATHS ===== */
+@keyframes run-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(100vw + 80px)); }
+}
+
+@keyframes hop-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(100vw + 60px)); }
+}
+
+@keyframes fly-right {
+  from { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(25vw) translateY(-15px); }
+  50% { transform: translateX(50vw) translateY(10px); }
+  75% { transform: translateX(75vw) translateY(-10px); }
+  to { transform: translateX(calc(100vw + 40px)) translateY(0); }
+}
+
+@keyframes waddle-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(100vw + 60px)); }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animals-layer {
+    display: none;
+  }
+}
